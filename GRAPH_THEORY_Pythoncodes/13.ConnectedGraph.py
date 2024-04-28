@@ -1,8 +1,14 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+seed = 40
+# Create an empty undirected graph
+G = nx.Graph()
 
-# Create a complete graph with 6 nodes
-G = nx.complete_graph(4)
+# Add nodes to the graph
+G.add_nodes_from([1, 2, 3, 4])
+
+# Add edges to the graph
+G.add_edges_from([(1, 2), (2, 3), (3, 4), (4, 1), (2, 4), (1, 3)])
 
 # Draw the graph
 nx.draw(G, with_labels=True)
